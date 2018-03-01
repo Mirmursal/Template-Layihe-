@@ -1,0 +1,835 @@
+﻿<!doctype html>
+<html class="no-js" lang="">
+    <head>
+         <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="owl/owl.carousel.min.css">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+   
+       <!-- start body wrapper -->
+      <!-- header begin -->            
+      <header class="header transparent no-shadow">          
+        <!-- Start Navbar -->
+        <div class="navbar navbar-inverse" role="navigation" id="slide-nav">
+          <div class="container">
+             <div class="navbar-header" style="left: 0px;">
+             <a onclick="slidemenyOpen()" class="navbar-toggle"><span class="sr-only">Toggle</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div>
+             <div id="slidemenu" style="max-height: 379px; left: -300px;box-sizing: border-box;" class="">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a style="font-family: 'Roboto Condensed', sans-serif;" href="index.html" class="dropdown-toggle" >Ana Səhifə</a>
+                  
+                </li>
+                <li class="dropdown">
+                  <a href="about.html" class="dropdown-toggle">Haqqimizda</a>
+                </li>
+                <li class="dropdown">
+                  <a href="listings-option-1.html" class="dropdown-toggle">Listing</a>
+                  
+                </li>
+                <li class="dropdown">
+                  <a style="font-family: 'Roboto Condensed', sans-serif;" href="contact.html" class="dropdown-toggle">Əlaqə</a>
+                </li>
+                <li  class="dropdown">
+                  <a onclick="fromLeft()" style="font-size: 22px; cursor: pointer;" class="solUcun dropdown-toggle" data-toggle="dropdown">
+                  <i class="fa fa-user-plus " aria-hidden="true"></i>
+                  </a>
+
+                </li>
+                 <li class="dropdown">
+                  <a  href="myprofil.html" title="Profil" class="dropdown-toggle" data-toggle="dropdown"><img style="width: 38px;height: 38px;border:3px solid white;
+                  border-radius: 100%;margin-top: -10px;" src="img/user/7.jpg" alt=""></a> 
+                  <ul class="dropdown-menu">
+                    <li><a href="myprofil.html">Profil</a></li>
+                    <li><a href="#">Çıxış</a></li>  
+                    </ul>
+                </li>
+
+                </li>
+                  <li class="dropdown">
+                  <a style="font-family: 'Roboto Condensed', sans-serif;" href="newAdd.html" class="dropdown-toggle">Tövsiyə et</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><div class="inverse" id="navbar-height-col" style="left: -300px;"></div>
+        <!-- End Navbar -->
+        <!-- register popup begin -->  
+  <div id="popupRow" class="row">
+     <!-- geriye begin -->
+     <i onclick="toLeft()" id="toLeft" class="fa fa-times-circle" aria-hidden="true"></i>
+    <!-- geriye end -->
+          <div class="col-sm-12 text-center" style=" margin-top: 60px; overflow-y: auto;">
+        <div class="panel panel-form" style="display: inline-block; top: 0px; margin-top: 55px; opacity: 1;">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <a id="a1" style="cursor: pointer;" onclick="closeRegister()"  class="active" id="login-form-link">Daxil ol</a>
+                  </div>
+                  <div class="col-xs-6">
+                    <a id="a2"  style="cursor: pointer;" onclick="openRegister()" id="register-form-link">Qeydiyyat</a>
+                  </div>
+                </div>
+                <hr>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <form  id="login-form" action="#" method="post">
+                      <div class="form-group">
+                        <input type="text" name="username" id="login-username" tabindex="1" class="form-control" placeholder="İstifadəçi adi" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password" id="login-password" tabindex="2" class="form-control" placeholder="Şifrə">
+                      </div>
+                      <div class="form-group text-center">
+                        <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                        <label for="remember"> Yadda saxla</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-submit" value="Daxil ol">
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="text-center">
+                              <a href="forgot-password.html" tabindex="5" class="login-forgot-password">Şifrəni Unutmusan?</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <form id="register-form" action="#" method="post">
+                      <div class="form-group">
+                        <input type="text" name="username" id="register-username" tabindex="1" class="form-control" placeholder="Şifrə" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="email" name="email" id="register-email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password" id="register-password" tabindex="2" class="form-control" placeholder="Şifrə">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="confirm-password" id="register-confirm-password" tabindex="2" class="form-control" placeholder="Təkrar Şifrə">
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-submit" value="Qeydiyyatdan Keç">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- register-popup end -->
+      </header>
+          <!-- header end -->
+          <!-- search video drag benin -->
+
+          <!-- search video drag end -->
+          <!-- first video section begin -->
+      <div class="container-fluid hero-header h-video transparent" style="height: 791px;">
+          <div class="hero-video" style="opacity: 1;">
+               <iframe class="fullvid" id="myVid" width="1280" height="720" src="https://player.vimeo.com/video/141274767?background=1" frameborder="0" volume="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="width: 1588px; height: 895.437px;">
+               </iframe>
+          </div>  
+      </div>
+      <!-- search centralizied begin -->
+      <div id="searchField" class="hero-search" style="width: 70%;">
+              <form>
+               <fieldset>
+                  <input type="text" class="form-control" data-placeholder="Explore and Enjoy..." placeholder="Axtar"> 
+                  <!-- <span class="typed-cursor">|</span> -->
+              </fieldset>
+                <!-- Start Search cities Toggle -->
+              <div onclick="searchBoxOpen()" style="transition-duration: 22s!i;" id="searchToggle" class="search-cities-toggle" style="opacity: 1;">
+                 <i class="fa fa-search-plus" aria-hidden="true"></i>
+              </div>
+                <!-- End Search cities Toggle -->         
+             <div class="search-submit">
+                  <input type="submit" value=" ">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+             </div>
+         </form>
+         <!-- cities-category filter begin -->
+         <div id="search-cities-drag">
+           <form id="mapSearch" class="form-inline" method="post">
+                        <ul>
+                            <li>
+                                <label> Şəhər / region</label>
+                                <select class="Test" id="cities">
+                                    <option name="location" value="all">Hamısı</option>
+                                    <option name="location" value="Ağcabədi">Ağcabədi</option>
+                                    <option name="location" value="Ağdam">Ağdam</option>
+                                    <option name="location" value="Ağdaş">Ağdaş</option>
+                                    <option name="location" value="Ağdərə">Ağdərə</option>
+                                    <option name="location" value="Ağstafa">Ağstafa</option>
+                                    <option name="location" value="Ağsu">Ağsu</option>
+                                    <option name="location" value="Astara">Astara</option>
+                                    <option name="location" value="Bakı">Bakı</option>
+                                    <option name="location" value="Balakən">Balakən</option>
+                                    <option name="location" value="Beyləqan">Beyləqan</option>
+                                    <option name="location" value="Bərdə">Bərdə</option>
+                                    <option name="location" value="Biləsuvar">Biləsuvar</option>
+                                    <option name="location" value="Cəbrayıl">Cəbrayıl</option>
+                                    <option name="location" value="Cəlilabad">Cəlilabad</option>
+                                    <option name="location" value="Culfa">Culfa</option>
+                                    <option name="location" value="Daşkəsən">Daşkəsən</option>
+                                    <option name="location" value="Dəliməmmədli ">Dəliməmmədli  </option>
+                                    <option name="location" value="Füzuli">Füzuli</option>
+                                    <option name="location" value="Gədəbəy">Gədəbəy</option>
+                                    <option name="location" value="Gəncə">Gəncə</option>
+                                    <option name="location" value="Goranboy">Goranboy</option>
+                                    <option name="location" value="Göyçay">Göyçay</option>
+                                    <option name="location" value="Göygöl">Göygöl</option>
+                                    <option name="location" value="Cəlilabad">Cəlilabad</option>
+                                    <option name="location" value="Hacıqabul">Hacıqabul</option>
+                                    <option name="location" value="Xaçmaz">Xaçmaz</option>
+                                    <option name="location" value="Xankəndi">Xankəndi</option>
+                                    <option name="location" value="Xocalı">Xocalı</option>
+                                    <option name="location" value="Xocavənd">Xocavənd</option>
+                                    <option name="location" value="Xırdalan">Xırdalan</option>
+                                    <option name="location" value="Xızı">Xızı</option>
+                                    <option name="location" value="İmişli">İmişli</option>
+                                    <option name="location" value="İsmayıllı">İsmayıllı</option>
+                                    <option name="location" value="Kəlbəcər">Kəlbəcər</option>
+                                    <option name="location" value="Kürdəmir">Kürdəmir</option>
+                                    <option name="location" value="Qax">Qax</option>
+                                    <option name="location" value="Qazax">Qazax</option>
+                                    <option name="location" value="Qəbələ">Qəbələ</option>
+                                    <option name="location" value="Qobustan">Qobustan</option>
+                                    <option name="location" value="Tovuz">Tovuz</option>
+                                    <option name="location" value="Quba">Quba</option>
+                                    <option name="location" value="Qubadlı">Qubadlı</option>
+                                    <option name="location" value="Qusar">Qusar</option>
+                                    <option name="location" value="Laçın">Laçın</option>
+                                    <option name="location" value="Lerik">Lerik</option>
+                                    <option name="location" value="Lənkəran">Lənkəran</option>
+                                    <option name="location" value="Masallı">Masallı</option>
+                                    <option name="location" value="Mingəçevir">Mingəçevir</option>
+                                    <option name="location" value="Naxçıvan">Naxçıvan</option>
+                                    <option name="location" value="Neftçala">Neftçala</option>
+                                    <option name="location" value="Oğuz">Oğuz</option>
+                                    <option name="location" value="Ordubad">Ordubad</option>
+                                    <option name="location" value="Saatlı">Saatlı</option>
+                                    <option name="location" value="Sabirabad">Sabirabad</option>
+                                    <option name="location" value="Salyan">Salyan</option>
+                                    <option name="location" value="Samux">Samux</option>
+                                    <option name="location" value="Siyəzən">Siyəzən</option>
+                                    <option name="location" value="Sumqayıt">Sumqayıt</option>
+                                    <option name="location" value="Şabran">Şabran</option>
+                                    <option name="location" value="Şamaxı">Şamaxı</option>
+                                    <option name="location" value="Şahbuz">Şahbuz</option>
+                                    <option name="location" value="Şəki">Şəki</option>
+                                    <option name="location" value="Şəmkir">Şəmkir</option>
+                                    <option name="location" value="Şərur">Şərur</option>
+                                    <option name="location" value="Şirvan">Şirvan</option>
+                                    <option name="location" value="Şuşa">Şuşa</option>
+                                    <option name="location" value="Tərtər">Tərtər</option>
+                                    <option name="location" value="Ucar">Ucar</option>
+                                    <option name="location" value="Yardımlı">Yardımlı</option>
+                                    <option name="location" value="Yevlax">Yevlax</option>
+                                    <option name="location" value="Zaqatala">Zaqatala</option>
+                                    <option name="location" value="Zəngilan">Zəngilan</option>
+                                    <option name="location" value="Zərdab">Zərdab</option>
+                               </select>
+                            </li>
+                            <li>
+                                <label>Kateqoriya</label>
+                                <select class="Test" id="post_type">
+                                    <option name="type" value="all">Hamısı</option>
+                                    <option name="type" value="1">Səyahət</option>
+                                    <option name="type" value="0">Qida</option>
+                                    <option name="type" value="0">İstirahət</option>
+                                    <option name="type" value="0">Təhsil</option>
+                                    <option name="type" value="0">Sağlamliq</option>
+                                    <option name="type" value="0">Aliş-veriş</option>
+                                    <option name="type" value="0">Dizayn</option>
+                                    <option name="type" value="0">Şarm</option>
+                                    <option name="type" value="0">İdman</option>
+                                    <option name="type" value="0">Əyləncə</option>
+                                    <option name="type" value="0">Digər</option>
+                                </select>
+
+                            </li>
+                        </ul>
+                        <div class="search-error-desc" style="">
+                            <p class="infoMessage text-center"></p>
+                        </div>
+                    </form>
+         </div>
+         <!-- ctyes-category filter end -->
+     </div>
+      <!-- search cenytralized end -->
+       
+          <!-- first video section end -->
+
+          <!-- start catigory section +++++++++++++++++++++++-->
+    <section id="category">
+       <div class="container-fluid front-categories">
+        <div class="row row-title">
+          <h1 style="font-family: 'Roboto ', sans-serif;">Bugün Nə Haqqinda Məsləhətə Ehtiyacin Var ?</h1>
+          <h4>Tövsiyyə Olunanlari Səndə Bil</h4>
+        </div>
+        <div class="row cat-itens">
+          <div class="cat-item">
+            <div class="cat-overlay"></div>
+            <div class="cat-image" style="background-image:url('img/Hpcat/1.jpg')"></div>
+            <div class="cat-icon"><i class="fa fa-bus" aria-hidden="true"></i></div>
+            <div class="cat-counter">34</div>
+            <a href="listings-option-1.html">
+              <div class="cat-text">Səyahət</div>
+            </a>
+          </div>
+          <div class="cat-item">
+            <div class="cat-overlay"></div>
+            <div class="cat-image" style="background-image:url('img/Hpcat/2.jpg')"></div>
+            <div class="cat-icon icon-dinner"><i class="fa fa-cutlery" aria-hidden="true"></i></div>
+            <div class="cat-counter">7</div>
+            <a href="listings-option-1.html">
+              <div class="cat-text">Qida</div>
+            </a>
+          </div>
+          <div class="cat-item">
+            <div class="cat-overlay"></div>
+            <div class="cat-image" style="background-image:url('img/Hpcat/3.jpg')"></div>
+            <div class="cat-icon icon-bed"><i class="fa fa-bed" aria-hidden="true"></i></div>
+            <div class="cat-counter">47</div>
+            <a href="listings-option-1.html">
+              <div class="cat-text">İstirahət</div>
+            </a>
+          </div>
+          <div class="cat-item">
+            <div class="cat-overlay"></div>
+            <div class="cat-image" style="background-image:url('img/Hpcat/4.jpg')"></div>
+            <div class="cat-icon icon-graduation-hat"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+            <div class="cat-counter">11</div>
+            <a href="listings-option-1.html">
+              <div class="cat-text">Təhsil</div>
+            </a>
+          </div>
+          <div class="cat-item">
+            <div class="cat-overlay"></div>
+            <div class="cat-image" style="background-image:url('img/Hpcat/5.jpg')"></div>
+            <div class="cat-icon icon-heart-pulse"><i class="fa fa-heartbeat" aria-hidden="true"></i></div>
+            <div class="cat-counter">61</div>
+            <a href="listings-option-1.html">
+              <div class="cat-text">Sağlamlıq</div>
+            </a>
+          </div>
+          <div class="cat-item">
+            <div class="cat-overlay"></div>
+            <div class="cat-image" style="background-image:url('img/Hpcat/6.jpg')"></div>
+            <div class="cat-icon icon-bag"><i class="fa fa-shopping-bag" aria-hidden="true"></i></div>
+            <div class="cat-counter">29</div>
+            <a href="listings-option-1.html">
+              <div class="cat-text">Alış-veriş</div>
+            </a>
+          </div>
+          <div class="cat-item">
+            <div class="cat-overlay"></div>
+            <div class="cat-image" style="background-image:url('img/Hpcat/7.jpg')"></div>
+            <div class="cat-icon icon-button"><i class="fa fa-diamond" aria-hidden="true"></i></div>
+            <div class="cat-counter">123</div>
+            <a href="listings-option-1.html">
+              <div class="cat-text">Dizayn</div>
+            </a>
+          </div>
+          <div class="cat-item">
+            <div class="cat-overlay"></div>
+            <div class="cat-image" style="background-image:url('img/Hpcat/8.jpg')"></div>
+            <div class="cat-icon icon-haircut"><i class="fa fa-scissors" aria-hidden="true"></i></div>
+            <div class="cat-counter">53</div>
+            <a href="listings-option-1.html">
+              <div class="cat-text">Şarm</div>
+            </a>
+          </div>
+          <div class="cat-item">
+            <div class="cat-overlay"></div>
+            <div class="cat-image" style="background-image:url('img/Hpcat/9.jpg')"></div>
+            <div class="cat-icon icon-trumpet"><i class="fa fa-music" aria-hidden="true"></i></div>
+            <div class="cat-counter">166</div>
+            <a href="listings-option-1.html">
+              <div class="cat-text">Əyləncə</div>
+            </a>
+          </div>
+          <div class="cat-item">
+            <div class="cat-overlay"></div>
+            <div class="cat-image" style="background-image:url('img/Hpcat/10.jpg')"></div>
+            <div class="cat-icon icon-city"><i class="fa fa-building-o" aria-hidden="true"></i></div>
+            <div class="cat-counter">92</div>
+            <a href="listings-option-1.html">
+              <div class="cat-text">Digər...</div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- raiting trending begin ++++++++++++++++++++++++++++++++++++++++++-->
+       <section id ="reyting">
+        <div class="container-fluid trending">
+          <div class="row row-title"> 
+          <h1>Ən Populyar Trendlər</h1>
+           <h4>Ən Son Tövsiyyə Olunanlar</h4>
+            </div>
+            <div class="row listing"> 
+         <div class="owl-carousel">
+             <div class="item">
+            <div class="col-sm-12" >
+              <div class="listing-item">
+                <a href="listings-option-1.html" class="category-icon " style="opacity: 1;"><i class="fa fa-coffee" aria-hidden="true"></i></a>
+                <div class="listing-item-rating" style="opacity: 1;">1</div>
+                <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
+                  <div class="listing-item-title-centralizer"> 
+                    <div class="listing-item-title"> Mənzərdə Qəhvə </div>
+                  </div>
+                  <img alt="" src="img/reyting/2.jpg"> 
+                  <div class="listing-black-overlay"> </div>
+                </a> 
+                      <div class="listing-item-data"> 
+                        <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>1000-Bəyənmə</p> </div>
+              </div>
+            </div></div>
+
+ <div class="item">
+            <div class="col-sm-12" > 
+              <div class="listing-item"> 
+                <a href="listings-option-1.html" class="category-icon" style="opacity: 1;"><i class="fa fa-university" aria-hidden="true"></i></a> 
+                <div class="listing-item-rating" style="opacity: 1;">2</div>
+                <a href="listing-detail.html" class="listing-item-link"><div class="reng"> </div>
+                  <div class="listing-item-title-centralizer">
+                    <div class="listing-item-title"> N.O.M.A. </div>
+                  </div>
+                  <img alt="" src="img/reyting/3.jpg">
+                  <div class="listing-black-overlay"></div>
+                </a> 
+                     <div class="listing-item-data"> 
+                        <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>1000-Bəyənmə</p> </div>
+                
+                </div>
+            </div></div>
+
+ <div class="item">
+         <div class="col-sm-12">
+              <div class="listing-item"> 
+              <a href="listings-option-1.html" class="category-icon " style="opacity: 1;"><i class="fa fa-pagelines" aria-hidden="true"></i></a> 
+              <div class="listing-item-rating" style="opacity: 1;">3</div>
+              <a href="listing-detail.html" class="listing-item-link"><div class="reng"> </div>
+               <div class="listing-item-title-centralizer">
+                <div class="listing-item-title"> Mərdəkan Botanika Baği </div></div>
+                <img alt="" src="img/reyting/1.jpg"> 
+                <div class="listing-black-overlay"></div></a>
+                      <div class="listing-item-data"> 
+                        <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>1000-Bəyənmə</p> </div>
+                </div>
+          </div></div>
+
+ <div class="item">
+         <div class="col-sm-12"> 
+               <div class="listing-item"> 
+               <a href="listings-option-1.html" class="category-icon " style="opacity: 1; "><i class="fa fa-glass" aria-hidden="true"></i></a>
+                <div class="listing-item-rating" style="opacity: 1;">4</div>
+                <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
+                <div class="listing-item-title-centralizer"> 
+                <div class="listing-item-title"> Cave B Estate</div></div>
+                <img alt="" src="img/reyting/4.jpg"> 
+                <div class="listing-black-overlay"></div></a> 
+                       <div class="listing-item-data"> 
+                        <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>1000-Bəyənmə</p> </div>
+                  </div>
+         </div></div>
+
+                 <div class="item">
+            <div class="col-sm-12" >
+              <div class="listing-item">
+                <a href="listings-option-1.html" class="category-icon " style="opacity: 1;"><i class="fa fa-coffee" aria-hidden="true"></i></a>
+                <div class="listing-item-rating" style="opacity: 1;">5</div>
+                <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
+                  <div class="listing-item-title-centralizer"> 
+                    <div class="listing-item-title"> Mənzərdə Qəhvə </div>
+                  </div>
+                  <img alt="" src="img/reyting/2.jpg"> 
+                  <div class="listing-black-overlay"> </div>
+                </a> 
+                      <div class="listing-item-data"> 
+                        <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>1000-Bəyənmə</p> </div>
+              </div>
+            </div></div>
+
+ <div class="item">
+            <div class="col-sm-12" > 
+              <div class="listing-item"> 
+                <a href="listings-option-1.html" class="category-icon" style="opacity: 1;"><i class="fa fa-university" aria-hidden="true"></i>
+                </a> 
+                <div class="listing-item-rating" style="opacity: 1;">6</div>
+                <a href="listing-detail.html" class="listing-item-link"><div class="reng"> </div>
+                  <div class="listing-item-title-centralizer">
+                    <div class="listing-item-title"> N.O.M.A. </div>
+                  </div>
+                  <img alt="" src="img/reyting/3.jpg">
+                  <div class="listing-black-overlay"></div>
+                </a> 
+                       <div class="listing-item-data"> 
+                        <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>1000-Bəyənmə</p> </div>
+              </div>
+            </div>
+          </div>
+
+ <div class="item">
+         <div class="col-sm-12">
+              <div class="listing-item"> 
+              <a href="listings-option-1.html" class="category-icon " style="opacity: 1;"><i class="fa fa-pagelines" aria-hidden="true"></i></a> 
+              <div class="listing-item-rating" style="opacity: 1;">7</div>
+              <a href="listing-detail.html" class="listing-item-link"><div class="reng"> </div>
+               <div class="listing-item-title-centralizer">
+                <div class="listing-item-title"> Mərdəkan Botanika Baği </div></div>
+                <img alt="" src="img/reyting/1.jpg"> 
+                <div class="listing-black-overlay"></div></a>
+                       <div class="listing-item-data"> 
+                        <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>1000-Bəyənmə</p> </div>
+               </div>
+            </div>
+          </div>
+
+ <div class="item">
+         <div class="col-sm-12"> 
+               <div class="listing-item"> 
+               <a href="listings-option-1.html" class="category-icon " style="opacity: 1; "><i class="fa fa-glass" aria-hidden="true"></i></a>
+                <div class="listing-item-rating" style="opacity: 1;">8</div>
+                <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
+                <div class="listing-item-title-centralizer"> 
+                <div class="listing-item-title"> Cave B Estate</div></div>
+                <img alt="" src="img/reyting/4.jpg"> 
+                <div class="listing-black-overlay"></div></a> 
+                
+                <div class="listing-item-data"> 
+                        <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>1000-Bəyənmə</p> </div>
+                  </div>
+         </div>
+        </div>
+
+              </div>
+         </div>
+      </div>
+       </section>
+<!-- raiting trending end -->
+<!-- how it work begin -->
+       <section id="telimat">
+          <div class="container-fluid how color-bg"> 
+             <div class="row row-title"> 
+                  <h1 style="margin-bottom: 10px;">Bu Necə İşləyir</h1>
+                  <h4>Hər iki tərəf üçün yeni təcrübə və imkanlar</h4>
+             </div>
+      <div class="row how-items"> 
+             <div class="col-sm-3"> 
+                 <div class="how-item"> 
+                     <a href="#"> 
+                         <img alt="" src="http://webdesigntrade.net/city-listing/assets/images/miscellaneous/icon-1.png"> 
+                         <h3 class="how-item-title">Elan Yerləşdirənlər</h3> 
+                         <div class="how-item-excerpt"> Təşkilatın xeyirxahlığını hər kəsə göstərmək üçün bir siyahısını dərc et. Girişinizin hər bir detalını tanıtmaq üçün əlavə et və etiketləri əlavə edin.
+                         </div>
+                     </a> 
+                  </div>
+              </div>
+              <div class="col-sm-3"> 
+              <div class="how-item ">
+               <a href="#">
+                      <img alt="" src="http://webdesigntrade.net/city-listing/assets/images/miscellaneous/icon-2.png">
+                      <h3 class="how-item-title">İstehlakçılar</h3> 
+                      <div class="how-item-excerpt"> Asanlıqla yerli mütəxəssislər tərəfindən maraqlı seçilmiş yerləri tapın. Səfərinizi onlayn təşkil edərək vaxtınızı qoruyun və heç bir nöqəni qaçırmayın.
+                      </div>
+                </a>
+              </div>
+              </div>
+              <div class="col-sm-3">
+                  <div class="how-item">
+                       <a href="#"> 
+                                <img alt="" src="http://webdesigntrade.net/city-listing/assets/images/miscellaneous/icon-3.png">
+                                <h3 class="how-item-title">Hər kəs</h3> 
+                                <div class="how-item-excerpt"> Təcrübələr və zövqlər mübadiləsi, uzunmüddətli iş əlaqələri və yeni dostluqlar yaradan şəxsi və profissional şəbəkənizi genişləndirin.
+                                </div>
+                        </a> 
+                  </div>
+              </div>
+              <div class="col-sm-3"> 
+                  <div class="how-item">
+                          <a href="#"> 
+                                <img alt="" src="http://webdesigntrade.net/city-listing/assets/images/miscellaneous/icon-4.png"> 
+                                <h3 class="how-item-title">Pulsuz Və Premium</h3>
+                                <div class="how-item-excerpt">İstəyirsinizsə, indi pulsuz başlaya və mükafat hesabına köç edə bilərsiniz. Bütün plan və resursları görmək üçün basın.</div>
+                           </a> 
+                     </div>
+              </div>
+             </div>
+          </div>
+       </section>
+       <!-- how it work end -->
+
+       <!-- yeniler begin -->
+       <section id="yeniler">
+          <div class="container-fluid blog blog-home"> 
+            <div class="row row-title">
+               <h1>Yeni tövsiyələr</h1> 
+               <h4>Sizin üçün bir sıra təkliflərimiz var</h4> 
+           </div>
+           <div class="row listing white"> 
+
+  <div class="owl-carousel">
+    <div class="item">
+       <div class="col-sm-12">
+                  <div class="listing-item ">
+                   <a href="blog-option-1.html" class="category-icon " style="opacity: 1;"><i class="fa fa-newspaper-o fa-2x" aria-hidden="true"></i></a>
+                    <div class="listing-item-date" style="opacity: 1;"> 
+                      <div class="day">12</div>
+                      <div class="month">Feb</div>
+                    </div>
+                  
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
+                       <div class="listing-item-title-centralizer">
+                           <div  class="listing-item-title "> Beach Glitz-dən Urban Ritz-dən Mayami Hotels Shine</div>
+                        </div>
+                        <img alt="" src="img/blog/14.jpg"> 
+                        <div class="listing-black-overlay"></div>
+                      </a> 
+                  
+                      <div class="listing-item-data"> 
+                        <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>1000-Bəyənmə</p> </div>
+                     
+                        </div>
+                 </div>
+    </div>
+    <div class="item">
+        <div class="col-sm-12">
+                  <div class="listing-item"> 
+                     <a href="blog-option-1.html" class="category-icon" style="opacity: 1;"><i class="fa fa-paperclip fa-2x" aria-hidden="true"></i></a> 
+                     <div class="listing-item-date" style="opacity: 1;"> 
+                       <div class="day">07</div>
+                       <div class="month">Feb</div>
+                     </div>
+                     <a href="listing-detail.html" class="listing-item-link"><div class="reng"> </div>
+                        <div class="listing-item-title-centralizer"> 
+                          <div class="listing-item-title"> Bakinin ən yaxşı alış-veriş </div>
+                        </div>
+                        <img alt="" src="img/blog/15.jpg"> 
+                        <div class="listing-black-overlay"></div>
+                      </a>
+                      <div class="listing-item-data"> 
+                  <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>123-Bəyənmə</p>
+                
+                    </div>
+                     </div>
+                </div>
+
+    </div>
+    <div class="item">
+        <div class="col-sm-12"> 
+                  <div class="listing-item">
+                       <a href="blog-option-1.html" class="category-icon "  style="opacity: 1;"><i class="fa fa-hand-peace-o fa-2x" aria-hidden="true"></i></a>
+                      <div class="listing-item-date"> 
+                        <div class="day">02</div>
+                        <div class="month">Feb</div>
+                      </div>
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
+                       <div class="listing-item-title-centralizer">
+                          <div class="listing-item-title"> NYC-də bu romantik tədbirlər zamanı yenidən sevgiyə bürünmək </div>
+                       </div>
+                        <img alt="" src="img/blog/17.jpg"> 
+                        <div class="listing-black-overlay"></div>
+                      </a> 
+                       <div class="listing-item-data"> 
+                  <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>123-Bəyənmə</p>
+                
+                    </div>
+                    </div>
+                </div>
+    </div>
+    <div class="item">
+       <div class="col-sm-12">
+                 <div class="listing-item">
+                   <a href="blog-option-1.html" class="category-icon "  style="opacity: 1;"><i class="fa fa-lightbulb-o fa-2x" aria-hidden="true"></i></a>
+                   <div class="listing-item-date"> 
+                       <div class="day">23</div>
+                       <div class="month">Jan</div>
+                   </div>
+                   <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
+                       <div class="listing-item-title-centralizer"> 
+                       <div class="listing-item-title"> Goat Hill Pizza-dan sourdough alın </div>
+                       </div>
+                       <img alt="" src="img/blog/16.jpg">
+                        <div class="listing-black-overlay"></div>
+                    </a>
+                      <div class="listing-item-data"> 
+                  <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>123-Bəyənmə</p>
+            
+                      </div>
+                          </div>
+                </div>
+    </div>
+     <div class="item">
+       <div class="col-sm-12">
+                  <div class="listing-item ">
+                   <a href="blog-option-1.html" class="category-icon " style="opacity: 1;"><i class="fa fa-newspaper-o fa-2x" aria-hidden="true"></i></a>
+                    <div class="listing-item-date" style="opacity: 1;"> 
+                      <div class="day">12</div>
+                      <div class="month">Feb</div>
+                    </div>
+                  
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
+                       <div class="listing-item-title-centralizer">
+                           <div class="listing-item-title"> Beach Glitz-dən Urban Ritz-dən Mayami Hotels Shine</div>
+                        </div>
+                        <img alt="" src="img/blog/14.jpg"> 
+                        <div class="listing-black-overlay"></div>
+                      </a> 
+                  
+                      <div class="listing-item-data"> 
+                        <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>1000-Bəyənmə</p>
+                     
+                      </div>
+                     
+                        </div>
+                 </div>
+    </div>
+    <div class="item">
+        <div class="col-sm-12">
+                  <div class="listing-item"> 
+                     <a href="blog-option-1.html" class="category-icon" style="opacity: 1;"><i class="fa fa-paperclip fa-2x" aria-hidden="true"></i></a> 
+                     <div class="listing-item-date" style="opacity: 1;"> 
+                       <div class="day">07</div>
+                       <div class="month">Feb</div>
+                     </div>
+                     <a href="listing-detail.html" class="listing-item-link"><div class="reng"> </div>
+                        <div class="listing-item-title-centralizer"> 
+                          <div class="listing-item-title"> Bakinin ən yaxşı alış-veriş şəbəkələrindən çantalarınızı doldurun</div>
+                        </div>
+                        <img alt="" src="img/blog/15.jpg"> 
+                        <div class="listing-black-overlay"></div>
+                      </a>
+                      <div class="listing-item-data"> 
+                  <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>123-Bəyənmə</p>
+                
+                    </div>
+                     </div>
+                </div>
+
+    </div>
+    <div class="item">
+        <div class="col-sm-12"> 
+                  <div class="listing-item">
+                       <a href="blog-option-1.html" class="category-icon "  style="opacity: 1;"><i class="fa fa-hand-peace-o fa-2x" aria-hidden="true"></i></a>
+                      <div class="listing-item-date"> 
+                        <div class="day">02</div>
+                        <div class="month">Feb</div>
+                      </div>
+                      <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
+                       <div class="listing-item-title-centralizer">
+                          <div class="listing-item-title"> NYC-də bu romantik tədbirlər zamanı yenidən sevgiyə bürünmək </div>
+                       </div>
+                        <img alt="" src="img/blog/17.jpg"> 
+                        <div class="listing-black-overlay"></div>
+                      </a> 
+                       <div class="listing-item-data"> 
+                  <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>123-Bəyənmə</p>
+                
+                    </div>
+                    </div>
+                </div>
+    </div>
+    <div class="item">
+       <div class="col-sm-12">
+                 <div class="listing-item">
+                   <a href="blog-option-1.html" class="category-icon "  style="opacity: 1;"><i class="fa fa-lightbulb-o fa-2x" aria-hidden="true"></i></a>
+                   <div class="listing-item-date"> 
+                       <div class="day">23</div>
+                       <div class="month">Jan</div>
+                   </div>
+                   <a href="listing-detail.html" class="listing-item-link"> <div class="reng"> </div>
+                       <div class="listing-item-title-centralizer"> 
+                       <div class="listing-item-title"> Goat Hill Pizza-dan sourdough alın </div>
+                       </div>
+                       <img alt="" src="img/blog/16.jpg">
+                        <div class="listing-black-overlay"></div>
+                    </a>
+                  <div class="listing-item-data"> 
+                    <i class="fa fa-heart-o fa-2x" title="Bəyən" aria-hidden="true"></i><p>123-Bəyənmə  </p>
+                  </div>
+                          </div>
+                </div>
+    </div>
+  </div></div>
+                </div>
+       </section>
+       <!-- yeniler end -->
+
+
+        <!-- footer begin -->
+      <footer>
+        <div class="row footer-info">
+          <div class="footer-col footer-terms">
+            <a href="#">İstifadə Şərtləri</a>
+          </div>
+          <div class="footer-col footer-privacy">
+            <a href="#">Gizlilik Siyasəti</a>
+          </div>
+          <div class="footer-col social-networks">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+          </div>
+          <div class="footer-col footer-links">
+            <a href="index-vimeo.html">Ana Səhifə</a>
+            <a href="about.html">Haqqimizda</a>
+            <a href="#" class="sign-in">Qeydiyyat</a>
+            <a href="pricing.html">Qiymətləndirmə</a>
+            <a href="blog-option-1.html">Blog</a>
+            <a href="contact.html">Əlaqə</a>
+          </div>
+          <div class="footer-col footer-contact">
+            <div class="footer-address">
+              İş Yeriniz Burada
+            </div>
+            <div class="footer-contact-data">
+              (99) 989-745-9922
+            </div>
+          </div>
+        </div><!-- //footer info bura qeder -->
+        <div class="row footer-logo">
+          <a href="index-vimeo.html">
+            <img alt="" src="http://webdesigntrade.net/city-listing/assets/images/logo.png">
+          </a>
+        </div>
+        <div class="row footer-credits">
+          <div class="copyright">
+            (C) 2017  Bütün Hüquqları Qorunur
+          </div>
+          <div class="developer">MM Production Tərəfindən Hazirlanmişdir
+               <a href="https://themeforest.net/user/webdesigntrade" target="_blank">Vebdizayn Ticarəti</a>.
+               </div>
+        </div>
+      </footer>
+
+
+
+       <!-- end body wrapper -->
+       <div class="scroll"><i class="fa fa-angle-double-up fa-3x" aria-hidden="true"></i></div>
+    </body>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="owl/owl.carousel.min.js">  </script>
+       
+        <script src="js/main.js"></script>
+
+        <script src="https://use.fontawesome.com/d8787270cc.js"></script>
+
+</html>

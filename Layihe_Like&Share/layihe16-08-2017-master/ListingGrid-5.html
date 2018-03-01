@@ -1,0 +1,542 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+	<title></title>
+     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+       <link rel="stylesheet" href="owl/owl.carousel.min.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+   </head>
+<body style="width:100%;">
+
+<div class="wrapper" style="overflow: hidden;">
+   
+   <!-- header begin -->            
+      <header style="background: rgb(38,163,135)!important;" class="header transparent no-shadow">       
+        <!-- Start Navbar -->
+        <div class="navbar navbar-inverse" role="navigation" id="slide-nav">
+          <div class="container">
+             <div class="navbar-header" style="left: 0px;">
+             <a onclick="slidemenyOpen()" class="navbar-toggle"><span class="sr-only">Toggle</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a></div>
+             <div id="slidemenu" style="max-height: 379px; left: -300px;" class="">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                  <a style="font-family: 'Roboto Condensed', sans-serif;" href="index.html" class="dropdown-toggle" >Ana Səhifə</a>
+                  
+                </li>
+                <li class="dropdown">
+                  <a href="about.html" class="dropdown-toggle">Haqqimizda</a>
+                </li>
+                <li class="dropdown">
+                  <a href="listings-option-1.html" class="dropdown-toggle" >Listing</a>
+                  
+                </li>
+                <li class="dropdown">
+                  <a style="font-family: 'Roboto Condensed', sans-serif;" href="contact.html" class="dropdown-toggle">Əlaqə</a>
+                </li>
+                <li  class="dropdown">
+                  <a onclick="fromLeft()" style="cursor: pointer;" class="solUcun dropdown-toggle" data-toggle="dropdown">Qeydiyyat 
+                  <i class="fa fa-user-plus" aria-hidden="true"></i>
+                  </a>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div><div class="inverse" id="navbar-height-col" style="left: -300px;"></div>
+        <!-- End Navbar -->
+        <!-- register popup begin -->  
+  <div id="popupRow" class="row">
+     <!-- geriye begin -->
+     <i onclick="toLeft()" id="toLeft" class="fa fa-times-circle" aria-hidden="true"></i>
+    <!-- geriye end -->
+          <div class="col-sm-12 text-center" style=" margin-top: 60px; overflow-y: auto;">
+        <div class="panel panel-form" style="display: inline-block; top: 0px; margin-top: 55px; opacity: 1;">
+              <div class="panel-heading">
+                <div class="row">
+                  <div class="col-xs-6">
+                    <a id="a1" style="cursor: pointer;" onclick="closeRegister()"  class="active" id="login-form-link">Daxil ol</a>
+                  </div>
+                  <div class="col-xs-6">
+                    <a id="a2"  style="cursor: pointer;" onclick="openRegister()" id="register-form-link">Qeydiyyat</a>
+                  </div>
+                </div>
+                <hr>
+              </div>
+              <div class="panel-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <form  id="login-form" action="#" method="post">
+                      <div class="form-group">
+                        <input type="text" name="username" id="login-username" tabindex="1" class="form-control" placeholder="İstifadəçi adi" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password" id="login-password" tabindex="2" class="form-control" placeholder="Şifrə">
+                      </div>
+                      <div class="form-group text-center">
+                        <input type="checkbox" tabindex="3" class="" name="remember" id="remember">
+                        <label for="remember"> Yadda saxla</label>
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-submit" value="Daxil ol">
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="text-center">
+                              <a href="forgot-password.html" tabindex="5" class="login-forgot-password">Şifrəni Unutmusan?</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <form id="register-form" action="#" method="post">
+                      <div class="form-group">
+                        <input type="text" name="username" id="register-username" tabindex="1" class="form-control" placeholder="Şifrə" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="email" name="email" id="register-email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="password" id="register-password" tabindex="2" class="form-control" placeholder="Şifrə">
+                      </div>
+                      <div class="form-group">
+                        <input type="password" name="confirm-password" id="register-confirm-password" tabindex="2" class="form-control" placeholder="Təkrar Şifrə">
+                      </div>
+                      <div class="form-group">
+                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-submit" value="Qeydiyyatdan Keç">
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- register-popup end -->
+      </header>
+          <!-- header end -->
+
+    <!-- first map begin -->
+    <div id="listGrid5" class="row">
+        <div class="backgroundMap container-fluid">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d388630.94775344006!2d49.53860106987237!3d40.449168810275076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1str!2s!4v1503758563035" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+        <div id="mapTor" onclick="mapOpen()" class="tor">
+            <div class="tor-Center">
+               <div onclick="mapClose()" id="switchTor"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></div>
+                <i class="fa fa-location-arrow mapIcon" aria-hidden="true"></i>
+                <div class="map-button-text"> Xəritə Görünüşünə Baxin </div>
+            </div>
+        </div>
+        <!-- Mapin ustundeki sekil begin -->
+        <div id="mapImg" class="current-page-info"> 
+           <div class="breadcrumbs text-left">
+                  <ul>
+                    <li>
+                      <a href="index-vimeo.html">Home</a>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                      <a href="listings-option-1.html">Listings</a>
+                      <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                       <a href="listings-option-1.html">Food</a>
+                       <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </li>
+                    <li>
+                      <a href="listings-option-1.html">Restaurants</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="current-category"> 
+              <i class="fa fa-coffee" aria-hidden="true"></i>
+              <a href="listings-option-1.html">Restoranlar</a>
+           </div>
+           <div class="listing-flag icon-flag">
+               <i class="fa fa-flag-o" aria-hidden="true"></i>
+           </div>
+       </div>
+        <!-- mapin ustuneki sekil edn -->
+    </div>
+    <!-- first map end -->
+    <!-- result  filter begin -->
+    <div class="wrapper-result-filter">
+             <div class="resultSection">
+                 <div class="results-count">
+                     <span class="counter">85</span>nəticə</div>
+             </div>
+             <!-- filter begon -->
+             <div class="filter">
+                 <a class="grid-icon icon-icons" href="listings-option-1.html">
+                     <i class="fa fa-th" aria-hidden="true"></i>
+                 </a>
+                 <a class="grid-icon icon-menu2" href="ListingGrid-5.html">
+                     <i class="fa fa-bars" aria-hidden="true"></i>
+                 </a>
+                 <!-- selector begin -->
+                 <div id="filterBox">
+                    <div id="search-cities-drag" style="top:-4em;left: -5em;display: none">
+           <form id="mapSearch" class="form-inline" method="post">
+                        <ul>
+                            <li>
+                                <label> Şəhər / region</label>
+                                <select class="Test" id="cities">
+                                    <option name="location" value="all">Hamısı</option>
+                                    <option name="location" value="Ağcabədi">Ağcabədi</option>
+                                    <option name="location" value="Ağdam">Ağdam</option>
+                                    <option name="location" value="Ağdaş">Ağdaş</option>
+                                    <option name="location" value="Ağdərə">Ağdərə</option>
+                                    <option name="location" value="Ağstafa">Ağstafa</option>
+                                    <option name="location" value="Ağsu">Ağsu</option>
+                                    <option name="location" value="Astara">Astara</option>
+                                    <option name="location" value="Bakı">Bakı</option>
+                                    <option name="location" value="Balakən">Balakən</option>
+                                    <option name="location" value="Beyləqan">Beyləqan</option>
+                                    <option name="location" value="Bərdə">Bərdə</option>
+                                    <option name="location" value="Biləsuvar">Biləsuvar</option>
+                                    <option name="location" value="Cəbrayıl">Cəbrayıl</option>
+                                    <option name="location" value="Cəlilabad">Cəlilabad</option>
+                                    <option name="location" value="Culfa">Culfa</option>
+                                    <option name="location" value="Daşkəsən">Daşkəsən</option>
+                                    <option name="location" value="Dəliməmmədli ">Dəliməmmədli  </option>
+                                    <option name="location" value="Füzuli">Füzuli</option>
+                                    <option name="location" value="Gədəbəy">Gədəbəy</option>
+                                    <option name="location" value="Gəncə">Gəncə</option>
+                                    <option name="location" value="Goranboy">Goranboy</option>
+                                    <option name="location" value="Göyçay">Göyçay</option>
+                                    <option name="location" value="Göygöl">Göygöl</option>
+                                    <option name="location" value="Cəlilabad">Cəlilabad</option>
+                                    <option name="location" value="Hacıqabul">Hacıqabul</option>
+                                    <option name="location" value="Xaçmaz">Xaçmaz</option>
+                                    <option name="location" value="Xankəndi">Xankəndi</option>
+                                    <option name="location" value="Xocalı">Xocalı</option>
+                                    <option name="location" value="Xocavənd">Xocavənd</option>
+                                    <option name="location" value="Xırdalan">Xırdalan</option>
+                                    <option name="location" value="Xızı">Xızı</option>
+                                    <option name="location" value="İmişli">İmişli</option>
+                                    <option name="location" value="İsmayıllı">İsmayıllı</option>
+                                    <option name="location" value="Kəlbəcər">Kəlbəcər</option>
+                                    <option name="location" value="Kürdəmir">Kürdəmir</option>
+                                    <option name="location" value="Qax">Qax</option>
+                                    <option name="location" value="Qazax">Qazax</option>
+                                    <option name="location" value="Qəbələ">Qəbələ</option>
+                                    <option name="location" value="Qobustan">Qobustan</option>
+                                    <option name="location" value="Tovuz">Tovuz</option>
+                                    <option name="location" value="Quba">Quba</option>
+                                    <option name="location" value="Qubadlı">Qubadlı</option>
+                                    <option name="location" value="Qusar">Qusar</option>
+                                    <option name="location" value="Laçın">Laçın</option>
+                                    <option name="location" value="Lerik">Lerik</option>
+                                    <option name="location" value="Lənkəran">Lənkəran</option>
+                                    <option name="location" value="Masallı">Masallı</option>
+                                    <option name="location" value="Mingəçevir">Mingəçevir</option>
+                                    <option name="location" value="Naxçıvan">Naxçıvan</option>
+                                    <option name="location" value="Neftçala">Neftçala</option>
+                                    <option name="location" value="Oğuz">Oğuz</option>
+                                    <option name="location" value="Ordubad">Ordubad</option>
+                                    <option name="location" value="Saatlı">Saatlı</option>
+                                    <option name="location" value="Sabirabad">Sabirabad</option>
+                                    <option name="location" value="Salyan">Salyan</option>
+                                    <option name="location" value="Samux">Samux</option>
+                                    <option name="location" value="Siyəzən">Siyəzən</option>
+                                    <option name="location" value="Sumqayıt">Sumqayıt</option>
+                                    <option name="location" value="Şabran">Şabran</option>
+                                    <option name="location" value="Şamaxı">Şamaxı</option>
+                                    <option name="location" value="Şahbuz">Şahbuz</option>
+                                    <option name="location" value="Şəki">Şəki</option>
+                                    <option name="location" value="Şəmkir">Şəmkir</option>
+                                    <option name="location" value="Şərur">Şərur</option>
+                                    <option name="location" value="Şirvan">Şirvan</option>
+                                    <option name="location" value="Şuşa">Şuşa</option>
+                                    <option name="location" value="Tərtər">Tərtər</option>
+                                    <option name="location" value="Ucar">Ucar</option>
+                                    <option name="location" value="Yardımlı">Yardımlı</option>
+                                    <option name="location" value="Yevlax">Yevlax</option>
+                                    <option name="location" value="Zaqatala">Zaqatala</option>
+                                    <option name="location" value="Zəngilan">Zəngilan</option>
+                                    <option name="location" value="Zərdab">Zərdab</option>
+                               </select>
+                            </li>
+                            <li>
+                                <label>Kateqoriya</label>
+                                <select class="Test" id="post_type">
+                                    <option name="type" value="all">Hamısı</option>
+                                    <option name="type" value="1">Səyahət</option>
+                                    <option name="type" value="0">Qida</option>
+                                    <option name="type" value="0">İstirahət</option>
+                                    <option name="type" value="0">Təhsil</option>
+                                    <option name="type" value="0">Sağlamliq</option>
+                                    <option name="type" value="0">Aliş-veriş</option>
+                                    <option name="type" value="0">Dizayn</option>
+                                    <option name="type" value="0">Şarm</option>
+                                    <option name="type" value="0">İdman</option>
+                                    <option name="type" value="0">Əyləncə</option>
+                                    <option name="type" value="0">Digər</option>
+                                </select>
+
+                            </li>
+                        </ul>
+                        <div class="search-error-desc" style="">
+                            <p class="infoMessage text-center"></p>
+                        </div>
+                    </form>
+         </div>
+                 </div>
+                 <!-- selector end -->
+                 <!-- btn slector begin -->
+                 <div onclick="searchBoxOpen2()" class="btn-group bootstrap-select show-tick dropup" style="min-width: auto; max-width: 849px;">
+                    <button type="button" class="btn dropdown-toggle nothing-selected btn-default" data-toggle="dropdown" title="Filters" aria-expanded="false">
+                       <span class="filter-option pull-left">Filters</span>&nbsp;
+                       <span class="bs-caret">
+                          <span class="caret"></span>
+                       </span>
+                 </button>
+        </div>
+        <!-- btn selector end -->
+             </div>
+   </div>
+    <!-- result filter end -->
+    <!-- CONTAINER FLUID ZONE BEGIN -->
+ <div class="container-fluid listing-block"> 
+     <div class="row listing grid3 white"> 
+        <div class="col-sm-3"> 
+           <div class="listing-item"> 
+              <i class="fa fa-spoon category-icon icon-dinner" aria-hidden="true"></i>
+               <a href="listing-detail.html" class="listing-item-link"> 
+                  <div class="listing-item-title-centralizer"> 
+                      <div class="listing-item-title"> Area Four </div>
+                 </div>
+                 <img alt="" src="img/Listings/2.jpg">
+                 <div class="listing-black-overlay"></div>
+              </a> 
+              <div class="listing-item-data">
+              <a class="listing-item-address" href="listing-detail.html">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+                 Troy South End, 264 E. Berkley St, Boston </a> 
+              <div class="listing-item-excerpt"> Excellent wood-fired pizzas, salads, and croissants </div></div>
+              <div class="listing-category-name">  
+                   <a href="listings-option-1.html">Restaurant</a> 
+              </div>
+         </div>
+      </div>
+
+      <div class="col-sm-3"> 
+           <div class="listing-item"> 
+              <i class="fa fa-spoon category-icon icon-dinner" aria-hidden="true"></i>
+               <a href="listing-detail.html" class="listing-item-link"> 
+                  <div class="listing-item-title-centralizer"> 
+                      <div class="listing-item-title"> Area Four </div>
+                 </div>
+                 <img alt="" src="img/Listings/2.jpg">
+                 <div class="listing-black-overlay"></div>
+              </a> 
+              <div class="listing-item-data">
+              <a class="listing-item-address" href="listing-detail.html">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+                 Troy South End, 264 E. Berkley St, Boston </a> 
+              <div class="listing-item-excerpt"> Excellent wood-fired pizzas, salads, and croissants </div></div>
+              <div class="listing-category-name">  
+                   <a href="listings-option-1.html">Restaurant</a> 
+              </div>
+         </div>
+      </div>
+
+      <div class="col-sm-3"> 
+           <div class="listing-item"> 
+              <i class="fa fa-spoon category-icon icon-dinner" aria-hidden="true"></i>
+               <a href="listing-detail.html" class="listing-item-link"> 
+                  <div class="listing-item-title-centralizer"> 
+                      <div class="listing-item-title"> Area Four </div>
+                 </div>
+                 <img alt="" src="img/Listings/2.jpg">
+                 <div class="listing-black-overlay"></div>
+              </a> 
+              <div class="listing-item-data">
+              <a class="listing-item-address" href="listing-detail.html">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+                 Troy South End, 264 E. Berkley St, Boston </a> 
+              <div class="listing-item-excerpt"> Excellent wood-fired pizzas, salads, and croissants </div></div>
+              <div class="listing-category-name">  
+                   <a href="listings-option-1.html">Restaurant</a> 
+              </div>
+         </div>
+      </div>
+
+      <div class="col-sm-3"> 
+           <div class="listing-item"> 
+              <i class="fa fa-spoon category-icon icon-dinner" aria-hidden="true"></i>
+               <a href="listing-detail.html" class="listing-item-link"> 
+                  <div class="listing-item-title-centralizer"> 
+                      <div class="listing-item-title"> Area Four </div>
+                 </div>
+                 <img alt="" src="img/Listings/2.jpg">
+                 <div class="listing-black-overlay"></div>
+              </a> 
+              <div class="listing-item-data">
+              <a class="listing-item-address" href="listing-detail.html">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+                 Troy South End, 264 E. Berkley St, Boston </a> 
+              <div class="listing-item-excerpt"> Excellent wood-fired pizzas, salads, and croissants </div></div>
+              <div class="listing-category-name">  
+                   <a href="listings-option-1.html">Restaurant</a> 
+              </div>
+         </div>
+      </div>
+
+      <div class="col-sm-3"> 
+           <div class="listing-item"> 
+              <i class="fa fa-spoon category-icon icon-dinner" aria-hidden="true"></i>
+               <a href="listing-detail.html" class="listing-item-link"> 
+                  <div class="listing-item-title-centralizer"> 
+                      <div class="listing-item-title"> Area Four </div>
+                 </div>
+                 <img alt="" src="img/Listings/2.jpg">
+                 <div class="listing-black-overlay"></div>
+              </a> 
+              <div class="listing-item-data">
+              <a class="listing-item-address" href="listing-detail.html">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+                 Troy South End, 264 E. Berkley St, Boston </a> 
+              <div class="listing-item-excerpt"> Excellent wood-fired pizzas, salads, and croissants </div></div>
+              <div class="listing-category-name">  
+                   <a href="listings-option-1.html">Restaurant</a> 
+              </div>
+         </div>
+      </div>
+
+      <div class="col-sm-3"> 
+           <div class="listing-item"> 
+              <i class="fa fa-spoon category-icon icon-dinner" aria-hidden="true"></i>
+               <a href="listing-detail.html" class="listing-item-link"> 
+                  <div class="listing-item-title-centralizer"> 
+                      <div class="listing-item-title"> Area Four </div>
+                 </div>
+                 <img alt="" src="img/Listings/2.jpg">
+                 <div class="listing-black-overlay"></div>
+              </a> 
+              <div class="listing-item-data">
+              <a class="listing-item-address" href="listing-detail.html">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+                 Troy South End, 264 E. Berkley St, Boston </a> 
+              <div class="listing-item-excerpt"> Excellent wood-fired pizzas, salads, and croissants </div></div>
+              <div class="listing-category-name">  
+                   <a href="listings-option-1.html">Restaurant</a> 
+              </div>
+         </div>
+      </div>
+
+      <div class="col-sm-3"> 
+           <div class="listing-item"> 
+              <i class="fa fa-spoon category-icon icon-dinner" aria-hidden="true"></i>
+               <a href="listing-detail.html" class="listing-item-link"> 
+                  <div class="listing-item-title-centralizer"> 
+                      <div class="listing-item-title"> Area Four </div>
+                 </div>
+                 <img alt="" src="img/Listings/2.jpg">
+                 <div class="listing-black-overlay"></div>
+              </a> 
+              <div class="listing-item-data">
+              <a class="listing-item-address" href="listing-detail.html">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+                 Troy South End, 264 E. Berkley St, Boston </a> 
+              <div class="listing-item-excerpt"> Excellent wood-fired pizzas, salads, and croissants </div></div>
+              <div class="listing-category-name">  
+                   <a href="listings-option-1.html">Restaurant</a> 
+              </div>
+         </div>
+      </div>
+
+      <div class="col-sm-3"> 
+           <div class="listing-item"> 
+              <i class="fa fa-spoon category-icon icon-dinner" aria-hidden="true"></i>
+               <a href="listing-detail.html" class="listing-item-link"> 
+                  <div class="listing-item-title-centralizer"> 
+                      <div class="listing-item-title"> Area Four </div>
+                 </div>
+                 <img alt="" src="img/Listings/2.jpg">
+                 <div class="listing-black-overlay"></div>
+              </a> 
+              <div class="listing-item-data">
+              <a class="listing-item-address" href="listing-detail.html">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+                 Troy South End, 264 E. Berkley St, Boston </a> 
+              <div class="listing-item-excerpt"> Excellent wood-fired pizzas, salads, and croissants </div></div>
+              <div class="listing-category-name">  
+                   <a href="listings-option-1.html">Restaurant</a> 
+              </div>
+         </div>
+      </div>
+   </div>
+</div>
+    <!-- CONTAINR FLUID ZONE END -->
+       <!-- start section more -->
+        <section id="more" class="row">
+            <div class="more-listing icon-plus" title="" data-toggle="tooltip" data-placement="top" data-original-title="More Articles"><i class="fa fa-plus" aria-hidden="true"></i></div>
+        </section>
+<!-- end more section +++++++++++++++++++++++++++++-->
+       <!-- footer begin -->
+      <footer>
+        <div class="row footer-info">
+          <div class="footer-col footer-terms">
+            <a href="#">İstifadə Şərtləri</a>
+          </div>
+          <div class="footer-col footer-privacy">
+            <a href="#">Gizlilik Siyasəti</a>
+          </div>
+          <div class="footer-col social-networks">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-pinterest"></a>
+          </div>
+          <div class="footer-col footer-links">
+            <a href="index-vimeo.html">Ana Səhifə</a>
+            <a href="about.html">Haqqimizda</a>
+            <a href="#" class="sign-in">Qeydiyyat</a>
+            <a href="pricing.html">Qiymətləndirmə</a>
+            <a href="blog-option-1.html">Blog</a>
+            <a href="contact.html">Əlaqə</a>
+          </div>
+          <div class="footer-col footer-contact">
+            <div class="footer-address">
+              İş Yeriniz Burada
+            </div>
+            <div class="footer-contact-data">
+              (99) 989-745-9922
+            </div>
+          </div>
+        </div><!-- //footer info bura qeder -->
+        <div class="row footer-logo">
+          <a href="index-vimeo.html">
+            <img alt="" src="http://webdesigntrade.net/city-listing/assets/images/logo.png">
+          </a>
+        </div>
+        <div class="row footer-credits">
+          <div class="copyright">
+            (C) 2017  Bütün Hüquqları Qorunur
+          </div>
+          <div class="developer">MM Production Tərəfindən Hazirlanmişdir
+               <a href="https://themeforest.net/user/webdesigntrade" target="_blank">Vebdizayn Ticarəti</a>.
+               </div>
+        </div>
+      </footer>
+    </div>
+</body>
+
+
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+ <script src="owl/owl.carousel.min.js">  </script>
+       
+        <script src="https://use.fontawesome.com/d8787270cc.js"></script>
+</html>
